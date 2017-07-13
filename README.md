@@ -2,6 +2,57 @@
 
 Bash scripts and notes
 
+## fizz or buzz example
+
+```
+#!/bin/bash
+ 
+function isDivisibleBy {
+    return $(($1%$2))
+}
+ 
+function fizzOrBuzz {
+    output=""
+    isDivisibleBy $1 3 && output="Fizz"
+    isDivisibleBy $1 5 && output="${output}Buzz"
+    if [ -z $output ]; then
+        echo $1
+    else
+        echo $output;
+    fi
+}
+ 
+for number in {1..100}; do
+    echo "-`fizzOrBuzz $number`"
+done
+
+#!/bin/bash
+ 
+function isDivisibleBy {
+    return $(($1%$2))
+}
+ 
+function fizzOrBuzz {
+    output=""
+    if isDivisibleBy $1 3; then
+        output="Fizz"
+    fi
+    if isDivisibleBy $1 5; then
+        output="${output}Buzz"
+    fi
+    if [ -z $output ]; then
+        echo $1
+    else
+        echo $output;
+    fi
+}
+ 
+for number in {1..100}; do
+    fizzOrBuzz $number
+done
+
+```
+
 ### Thanks to antoine guillemot (antoine.nokia.bogota@gmail.com) for helping me out deploying and making these scripts
 
 ```
