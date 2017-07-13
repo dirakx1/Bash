@@ -4,7 +4,7 @@ Bash scripts and notes
 
 ### Thanks to antoine guillemot (antoine.nokia.bogota@gmail.com) for helping me out deploying and making these scripts
 
-``
+```
 #!/bin/bash
 
 ## NICE COLOR AND UTF8
@@ -40,4 +40,6 @@ fi
 
 CONTAINERNAME=$(echo -e "$CONTAINER" | rev | cut -d' ' -f1 | rev | cut -d'_' -f2- | rev | cut -d'_' -f2- | rev)
 docker-compose -f $CONF exec $CONTAINERNAME /bin/bash -c 'rabbitmqctl list_queues'
-``
+```
+
+
