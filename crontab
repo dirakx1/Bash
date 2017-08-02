@@ -1,0 +1,7 @@
+0 1 * * *     /home/user/postgres_backup/pg_backup.sh
+0 1 * * *    pg_dumpall |gzip > /home/user/backups/database/allbackup.gzip
+0 1 * * *    pg_dump db |gzip > /home/user/backups/database/dbname.gz
+0 1 * * *    pg_dump db |gzip > /home/user/backups/database/dbname-$(date \%d-\%m-\%Y).gz
+0 10 * * *   pg_dump db |gzip > /home/user/backups/database/dbname.gz
+0 10 * * *   pg_dump db |gzip > /home/user/backups/database/dbname-$(date \%d-\%m-\%Y).gz
+0 2 * * *    find /home/user/backups/ -mtime +15 -exec rm {} \;
