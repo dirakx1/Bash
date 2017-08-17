@@ -92,5 +92,6 @@ fi
 CONTAINERNAME=$(echo -e "$CONTAINER" | rev | cut -d' ' -f1 | rev | cut -d'_' -f2- | rev | cut -d'_' -f2- | rev)
 docker-compose -f $CONF exec $CONTAINERNAME /bin/bash -c 'rabbitmqctl list_queues'
 ```
-
+### Infinite loop
+* while true; do rm -f filename*; done
 
