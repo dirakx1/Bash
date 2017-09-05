@@ -95,3 +95,5 @@ docker-compose -f $CONF exec $CONTAINERNAME /bin/bash -c 'rabbitmqctl list_queue
 ### Infinite loop
 * while true; do rm -f filename*; done
 
+### files and directory size
+* du -sch . 
