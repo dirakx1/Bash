@@ -97,3 +97,6 @@ docker-compose -f $CONF exec $CONTAINERNAME /bin/bash -c 'rabbitmqctl list_queue
 
 ### files and directory size
 * du -sch . 
+
+### knowing ports open
+* netstat -lntu
