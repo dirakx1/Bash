@@ -100,3 +100,6 @@ docker-compose -f $CONF exec $CONTAINERNAME /bin/bash -c 'rabbitmqctl list_queue
 
 ### knowing ports open
 * netstat -lntu
+* netstat --listen
+
+
