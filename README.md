@@ -102,4 +102,7 @@ docker-compose -f $CONF exec $CONTAINERNAME /bin/bash -c 'rabbitmqctl list_queue
 * netstat -lntu
 * netstat --listen
 
+## open a connection via port x
+nc -l -vv -p 8000
+
 
