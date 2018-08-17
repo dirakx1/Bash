@@ -7,8 +7,6 @@
 #       s3cmd ($> apt-get install python-pip && pip install s3cmd)
 #
 
-
-
 BACKUP_PATH=/ephemeral/backups/database/
 BACKUP_NAME="$(date +%Y.%m.%d)_test_database.tgz"
 BACKUP_FILENAME=$(find ${BACKUP_PATH} -type f -name "${BACKUP_NAME}")
@@ -21,7 +19,6 @@ function send_backup_to_s3()
         
 }
 
-
 function remove_old_backups_locally()
 {
         echo -n "[INFO] Deleting backups older than ${KEEPDAYS} days..."
@@ -29,7 +26,6 @@ function remove_old_backups_locally()
         echo "[OK]"
 
 }
-
 
 function remove_old_backups_s3()
 {
@@ -50,7 +46,6 @@ s3cmd -c /root/backup-scripts/s3cfg ls s3://$1 | while read -r line;
      fi
 done;
 }
-
 
 echo "[$(date +%Y.%m.%d\ %Hh%M:%S)] Starting sending file backup to  S3 "
 
