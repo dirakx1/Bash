@@ -3,10 +3,10 @@
 # Description:
 #       This script is used to make daily backup of projects' databases
 #
-# Contact: Zina Infra Team
+# Contact: 
 #
 # Changelog:
-#       - 09.11.2016: initial version
+#       - 10.11.2010: initial version
 #
 
 BKPATH="/ephemeral/user/backups/database/"
