@@ -5,3 +5,10 @@
 0 10 * * *   pg_dump db |gzip > /home/user/backups/database/dbname.gz
 0 10 * * *   pg_dump db |gzip > /home/user/backups/database/dbname-$(date \%d-\%m-\%Y).gz
 0 2 * * *    find /home/user/backups/ -mtime +15 -exec rm {} \;
+## Examples with minutes and x seconds with sleep
+*/5 * * * * sleep 45; ls /file/*.zip |wc -l > /home/file2.csv
+*/5 * * * * find /file3/ -maxdepth 1 -iname "*.zip" |wc -l > file4.csv
+*/4 * * * * sleep 10; find /file5/ -maxdepth 1 -iname "*.zip" |wc -l > file10.csv
+
+
+
