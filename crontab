@@ -9,6 +9,8 @@
 */5 * * * * sleep 45; ls /file/*.zip |wc -l > /home/file2.csv
 */5 * * * * find /file3/ -maxdepth 1 -iname "*.zip" |wc -l > file4.csv
 */4 * * * * sleep 10; find /file5/ -maxdepth 1 -iname "*.zip" |wc -l > file10.csv
+*/3 * * * * ls -1 /files/temp | grep -i ".pdf$" | wc -l > files.csv
+
 
 
 
