@@ -10,7 +10,8 @@
 */5 * * * * find /file3/ -maxdepth 1 -iname "*.zip" |wc -l > file4.csv
 */4 * * * * sleep 10; find /file5/ -maxdepth 1 -iname "*.zip" |wc -l > file10.csv
 */3 * * * * ls -1 /files/temp | grep -i ".pdf$" | wc -l > files.csv
-
+## looking in pasth 3 months
+*/9 * * * * find others/$(date --date='-3 month' +%Y'/'%m) others/$(date --date='-2 month' +%Y'/'%m) others/$(date --date='-1 month' +%Y'/'%m) others/$(date +%Y'/'%m) -maxdepth 1 -type f -name 'example_*' -mtime -90| wc -l > results.csv
 
 
 
