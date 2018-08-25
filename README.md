@@ -2,7 +2,8 @@
 
 Bash scripts and notes
 
-## fizz or buzz example
+## General examples
+### fizz or buzz example
 
 ```
 #!/bin/bash
@@ -53,8 +54,6 @@ done
 
 ```
 
-### Thanks to antoine guillemot (antoine.nokia.bogota@gmail.com) for helping me out deploying and making these scripts
-
 ```
 #!/bin/bash
 
@@ -95,7 +94,7 @@ docker-compose -f $CONF exec $CONTAINERNAME /bin/bash -c 'rabbitmqctl list_queue
 ### Infinite loop
 * while true; do rm -f filename*; done
 
-### files and directory size
+### Files and directory size
 * du -sch . 
 
 ### knowing ports open
