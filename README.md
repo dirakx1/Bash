@@ -104,6 +104,7 @@ docker-compose -f $CONF exec $CONTAINERNAME /bin/bash -c 'rabbitmqctl list_queue
 ```
 ### Infinite loop
 * while true; do rm -f filename*; done
+* change "rm -f filename*" for whatever instruction you need. 
 
 ### Files and directory size
 * du -sch . 
