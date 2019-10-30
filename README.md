@@ -22,7 +22,7 @@ nc -l -vv -p 8000
 ```
 docker ps -a |cut -d " " -f 1 |xargs -i docker rm "{}"
 ```
-### Sorting first 20 heaviest 
+### Sorting first 20 heaviest files
 
 ```
 du -ah . | sort -n -r | head -n 20
