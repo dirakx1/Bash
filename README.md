@@ -4,6 +4,30 @@ Bash scripts and notes
 
 ## General examples
 
+### Infinite loop
+* while true; do rm -f filename*; done
+* change "rm -f filename*" for whatever instruction you need. 
+
+### Files and directory size
+* du -sch . 
+
+### knowing ports open
+* netstat -lntu
+* netstat --listen
+
+### open a connection via port x
+nc -l -vv -p 8000
+
+### Example of use of cut + xargs
+```
+docker ps -a |cut -d " " -f 1 |xargs -i docker rm "{}"
+```
+### Sorting first 20 heaviest 
+
+```
+du -ah . | sort -n -r | head -n 20
+```
+
 ### Grep/Find 
 ```
 grep -Er “github.com|bitbucket” PATH
@@ -102,24 +126,7 @@ fi
 CONTAINERNAME=$(echo -e "$CONTAINER" | rev | cut -d' ' -f1 | rev | cut -d'_' -f2- | rev | cut -d'_' -f2- | rev)
 docker-compose -f $CONF exec $CONTAINERNAME /bin/bash -c 'rabbitmqctl list_queues'
 ```
-### Infinite loop
-* while true; do rm -f filename*; done
-* change "rm -f filename*" for whatever instruction you need. 
 
-### Files and directory size
-* du -sch . 
-
-### knowing ports open
-* netstat -lntu
-* netstat --listen
-
-### open a connection via port x
-nc -l -vv -p 8000
-
-### Example of use of cut + xargs
-```
-docker ps -a |cut -d " " -f 1 |xargs -i docker rm "{}"
-```
 
 
 
