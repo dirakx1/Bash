@@ -34,7 +34,7 @@ grep -Er “github.com|bitbucket” PATH
 find PATH -name "requirements.txt" | xargs -i grep github.com '{}'|wc -l
 grep "May  7 09:33" /var/log/maillog  | grep "id=" | wc -l
 grep "May  7 09:" /var/log/maillog  | grep "id=" | cut -d':' -f2 | uniq -c | awk '{print "09:"$2" - mail_sent:"$1}'
-grep "May  7 09:33" /var/log/maillog  | awk '{print $6}' | sort | uniq | grep -v conn | wc -l
+grep "May  7 09:33" /var/log/maillog  | awk '{print $6}' | sort | uniq | grep -v conn | wc -l # -v to exclude 
 find . -name '*.pdf' -newermt 2012-01-31 ! -newermt 2012-02-29 | wc -l #find with threshold time
  
 ```
