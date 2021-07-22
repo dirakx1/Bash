@@ -129,7 +129,8 @@ fi
 CONTAINERNAME=$(echo -e "$CONTAINER" | rev | cut -d' ' -f1 | rev | cut -d'_' -f2- | rev | cut -d'_' -f2- | rev)
 docker-compose -f $CONF exec $CONTAINERNAME /bin/bash -c 'rabbitmqctl list_queues'
 ```
-
+## References
+* https://www.cyberciti.biz/faq/unix-linux-execute-command-using-ssh/   (Running comands remotely with ssh)
 
 
 
