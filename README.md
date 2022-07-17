@@ -15,7 +15,7 @@ Bash scripts and notes
 * netstat -lntu
 * netstat --listen
 
-## jill process by port
+## kill process by port
 * kill -9 $(lsof -ti:9998,9991,9999)
 
 ### open a connection via port x
