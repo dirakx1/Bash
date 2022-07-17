@@ -5,21 +5,33 @@ Bash scripts and notes
 ## General examples
 
 ### Infinite loop
-* while true; do rm -f filename*; done
+```
+while true; do rm -f filename*; done
+```
 * change "rm -f filename*" for whatever instruction you need. 
 
 ### Files and directory size
-* du -sch . 
 
-### knowing ports open
-* netstat -lntu
-* netstat --listen
+```
+du -sch . 
+```
 
+### knowing open ports
+```
+netstat -lntu
+netstat --listen
+```
 ## kill process by port
-* kill -9 $(lsof -ti:9998,9991,9999)
 
-### open a connection via port x
+```
+kill -9 $(lsof -ti:9998,9991,9999)
+```
+
+### Open a connection via port x
+
+```
 nc -l -vv -p 8000
+```
 
 ### Example of use of cut + xargs
 ```
