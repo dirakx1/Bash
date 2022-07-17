@@ -131,6 +131,7 @@ docker-compose -f $CONF exec $CONTAINERNAME /bin/bash -c 'rabbitmqctl list_queue
 ```
 ## References
 * https://www.cyberciti.biz/faq/unix-linux-execute-command-using-ssh/   (Running comands remotely with ssh)
+* https://devhints.io/bash (Cheatsheet) 
 
 
 
