@@ -1,4 +1,4 @@
-   #!/bin/bash
+#!/bin/bash
 
 # Set the directory where you want to search and replace
 dir="."
@@ -7,12 +7,12 @@ dir="."
 for file in "$dir"/*; do
     if [ -f "$file" ]; then
         # Check if the file contains the word "mainnet"
-        if grep -q "mainnet" "$file"; then
+        if grep -q "testnet" "$file"; then
             # Make a backup of the file
             cp "$file" "$file.bak"
 
-            # Replace "mainnet" with "mainnet" in the file
-            sed 's/mainnet/mainnet/g' "$file.bak" > "$file"
+            # Replace "testnet" with "mainnet" in the file
+            sed 's/testnet/mainnet/g' "$file.bak" > "$file"
 
             # Remove the backup file
             rm "$file.bak"
